@@ -260,7 +260,7 @@ class HasAndBelongsToManyAssociationsTest < ActiveRecord::TestCase
   end
 
   def test_habtm_adding_before_save
-    no_of_devels = Developer.count
+    no_of_delves = Developer.count
     no_of_projects = Project.count
     aredridel = Developer.new("name" => "Aredridel")
     aredridel.projects.concat([Project.find(1), p = Project.new("name" => "Projekt")])
@@ -268,7 +268,7 @@ class HasAndBelongsToManyAssociationsTest < ActiveRecord::TestCase
     assert_not_predicate p, :persisted?
     assert aredridel.save
     assert_predicate aredridel, :persisted?
-    assert_equal no_of_devels + 1, Developer.count
+    assert_equal no_of_delves + 1, Developer.count
     assert_equal no_of_projects + 1, Project.count
     assert_equal 2, aredridel.projects.size
     assert_equal 2, aredridel.projects.reload.size

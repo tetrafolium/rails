@@ -991,7 +991,7 @@ class PersistenceTest < ActiveRecord::TestCase
   end
 
   def test_persist_inherited_class_with_different_table_name
-    minimalistic_aircrafts = Class.new(Minimalistic) do
+    minimalistic_aircraft = Class.new(Minimalistic) do
       self.table_name = "aircraft"
     end
 

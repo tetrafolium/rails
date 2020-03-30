@@ -145,11 +145,11 @@ module ActiveRecord
           sub_recorder = CommandRecorder.new(delegate)
           sub_recorder.revert { yield }
 
-          invertions_proc = proc {
+          inventions_proc = proc {
             sub_recorder.replay(self)
           }
 
-          [:transaction, args, invertions_proc]
+          [:transaction, args, inventions_proc]
         end
 
         def invert_drop_table(args, &block)

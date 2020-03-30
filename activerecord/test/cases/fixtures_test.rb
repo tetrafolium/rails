@@ -104,8 +104,8 @@ class FixturesTest < ActiveRecord::TestCase
       assert_equal false, Aircraft.columns_hash["wheels_count"].null
       fixtures = {
         "aircraft" => [
-          { "name" => "working_aircrafts", "wheels_count" => 2 },
-          { "name" => "broken_aircrafts", "wheels_count" => nil },
+          { "name" => "working_aircraft", "wheels_count" => 2 },
+          { "name" => "broken_aircraft", "wheels_count" => nil },
         ]
       }
 

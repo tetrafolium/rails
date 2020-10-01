@@ -1,0 +1,4 @@
+inspecode:
+  unused:
+    options: [ --single-occurrence, --all-likelihoods ]
+    thresholds: { num-issues: 999 }
